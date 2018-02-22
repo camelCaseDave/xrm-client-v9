@@ -24,6 +24,11 @@ describe('string', () => {
         assert.equal(string.getAttributeType(), 'string');
     });
 
+    it('should only accept a string value', () => {
+        assert.doesNotThrow(() => new StringAttribute({ value: 'Joe' }));
+        assert.throws(() => new StringAttribute({ value: 2 }), TypeError);
+    });
+
     it('should only accept a format of email, textarea, text, tickersymbol, phone or url', () => {
         let allowed = ['email', 'textarea', 'text', 'tickersymbol', 'phone', 'url'];
         allowed.forEach((a) => {
