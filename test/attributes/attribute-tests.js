@@ -19,27 +19,27 @@ describe('attribute', () => {
     it('should only allow a submit mode of always, never or dirty', () => {
         let allowed = ['always', 'never', 'dirty'];
         allowed.forEach((a) => {
-            assert.doesNotThrow(() => { new Attribute({ submitMode: a }) });
+            assert.doesNotThrow(() => new Attribute({ submitMode: a }));
         });
 
-        assert.throws(() => { new Attribute({ submitMode: 'sometimes' }) }, TypeError);
+        assert.throws(() => new Attribute({ submitMode: 'sometimes' }), TypeError);
     });
 
     it('should only allow a required level of none, required or recommended', () => {
         let allowed = ['none', 'required', 'recommended'];
         allowed.forEach((a => {
-            assert.doesNotThrow(() => { new Attribute({ requiredLevel: a }) });
+            assert.doesNotThrow(() => new Attribute({ requiredLevel: a }));
         }));
 
-        assert.throws(() => { new Attribute({ requiredLevel: 'needed' }) }, TypeError);
+        assert.throws(() => new Attribute({ requiredLevel: 'needed' }), TypeError);
     });
 
     it('should only allow user privileges canRead, canUpdate and canCreate', () => {
         let allowed = { 'canRead': true, 'canUpdate': false, 'canCreate': false };
         let notAllowed = { 'canWrite': false };
 
-        assert.doesNotThrow(() => { new Attribute({ userPrivilege: allowed }) });
-        assert.throws(() => { new Attribute({ userPrivilege: notAllowed }) }, TypeError);
+        assert.doesNotThrow(() => new Attribute({ userPrivilege: allowed }));
+        assert.throws(() => new Attribute({ userPrivilege: notAllowed }), TypeError);
     });
 
     it('should default all user privileges to true if none are given', () => {

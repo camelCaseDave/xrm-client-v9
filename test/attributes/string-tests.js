@@ -32,9 +32,9 @@ describe('string', () => {
     it('should only accept a format of email, textarea, text, tickersymbol, phone or url', () => {
         let allowed = ['email', 'textarea', 'text', 'tickersymbol', 'phone', 'url'];
         allowed.forEach((a) => {
-            assert.doesNotThrow(() => { new StringAttribute({ format: a }) });
+            assert.doesNotThrow(() => new StringAttribute({ format: a }));
         });
 
-        assert.throws(() => { new StringAttribute({ format: 'title' }) }, TypeError);
+        assert.throws(() => new StringAttribute({ format: 'title' }), TypeError);
     });
 });

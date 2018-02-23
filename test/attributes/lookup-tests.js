@@ -28,6 +28,6 @@ describe('boolean', () => {
     });
 
     it('should not allow invalid lookup properties', () => {
-        assert.throws(() => { new LookupAttribute({ value: [{ primaryName: 'Parent Account', entityType: 'cccount' }] }) }, TypeError);
+        assert.throws(() => new LookupAttribute({ value: [{ primaryName: 'Parent Account', entityType: 'cccount' }] }), TypeError);
     });
 });
