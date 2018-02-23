@@ -1,6 +1,6 @@
 {
   "name": "xrm-client-v9",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Mock execution context for testing client-side scripting in Dynamics 365.",
   "main": "lib/xrm-client-v9.js",
   "directories": {
@@ -8,13 +8,30 @@
     "test": "test"
   },
   "scripts": {
-    "lint": "semistandard",
-    "unit": "mocha --reporter=spec test/*-tests.js",
+    "lint": "semistandard --env mocha",
+    "unit": "mocha --reporter=spec test/**/*-tests.js",
     "test": "npm run lint && npm run unit"
   },
   "author": "Dave Clark",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/camelCaseDave/xrm-client-v9.git"
+  },
+  "keywords": [
+    "xrm",
+    "dynamics",
+    "client",
+    "mock"
+  ],
   "license": "MIT",
-  "dependencies": {
+  "bugs": {
+    "url": "https://github.com/camelCaseDave/xrm-client-v9/issues"
+  },
+  "homepage": "https://github.com/camelCaseDave/xrm-client-v9/#readme",
+  "semistandard": {
+    "env": ["mocha"]
+  },
+  "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",

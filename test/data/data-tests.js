@@ -5,20 +5,20 @@ const Data = DataInternal.Data;
 const Entity = DataInternal.Entity;
 
 describe('data', () => {
-    let data;
-    beforeEach(() => {
-        data = new Data();
-    });
+  let data;
+  beforeEach(() => {
+    data = new Data();
+  });
 
-    it('should exist', () => {
-        assert.instanceOf(data, Data);
-    });
+  it('should exist', () => {
+    assert.instanceOf(data, Data);
+  });
 
-    it('should have attributes', () => {
-        assert.isArray(data.attributes);
-    });
+  it('should have attributes', () => {
+    assert.isArray(data.attributes);
+  });
 
-    it('should have entity', () => {
-        assert.instanceOf(data.entity, Entity);
-    });
+  it('should have entity', () => {
+    assert.instanceOf(data.entity, Entity);
+  });
 });
