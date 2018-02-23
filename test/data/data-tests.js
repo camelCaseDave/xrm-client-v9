@@ -15,7 +15,7 @@ describe('data', () => {
   });
 
   it('should have attributes', () => {
-    assert.isArray(data.attributes);
+    assert.isArray(data._attributes);
   });
 
   it('should have entity', () => {
