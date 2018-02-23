@@ -5,7 +5,7 @@ const StringAttribute = require('../../lib/xrm-client-v9/data/attributes').Strin
 describe('string', () => {
     let string;
     beforeEach(() => {
-        string = new StringAttribute({ maxLength: 100 });
+        string = new StringAttribute({ format: 'text', maxLength: 100 });
     });
 
     it('should exist', () => {
@@ -25,7 +25,7 @@ describe('string', () => {
     });
 
     it('should only accept a string value', () => {
-        assert.doesNotThrow(() => new StringAttribute({ value: 'Joe' }));
+        assert.doesNotThrow(() => new StringAttribute({ format: 'text', value: 'Joe' }));
         assert.throws(() => new StringAttribute({ value: 2 }), TypeError);
     });
 
@@ -36,13 +36,5 @@ describe('string', () => {
         });
 
         assert.throws(() => { new StringAttribute({ format: 'title' }) }, TypeError);
-    });
-
-    it('should return a format type of null if no format is given', () => {
-        let unformattedAttr = new StringAttribute();
-        assert.isNull(unformattedAttr.getFormat());
-
-        let formattedAttr = new StringAttribute({ format: 'text' });
-        assert.isNotNull(formattedAttr.getFormat());
     });
 });
