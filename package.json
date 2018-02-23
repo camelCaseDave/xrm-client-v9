@@ -1,6 +1,6 @@
 {
   "name": "xrm-client-v9",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mock execution context for testing client-side scripting in Dynamics 365.",
   "main": "lib/xrm-client-v9.js",
   "directories": {
