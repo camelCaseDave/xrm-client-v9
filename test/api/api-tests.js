@@ -24,17 +24,17 @@ describe('api', () => {
   it('deletes a record', () => {
     api.deleteRecord('contact', '00000000-0000-0000-0000-000000000000')
       .then((result) => {
-        assert.equal(result.id, '00000000-0000-0000-0000-000000000000')
+        assert.equal(result.id, '00000000-0000-0000-0000-000000000000');
       });
   });
 
   it('can\'t delete a record that doesn\'t exist', () => {
-    //api.deleteRecord('account', '00000000-0000-5555-0000-000000000000')
+    // api.deleteRecord('account', '00000000-0000-5555-0000-000000000000')
     // .then((result) => {
     //   assert.isString(result);
     // })
     // .error((error) => {
-    //   
+    //
     // });
   });
 });
