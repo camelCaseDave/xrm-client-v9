@@ -1,5 +1,4 @@
 const assert = require('chai').assert;
-const sinon = require('sinon');
 
 const Api = require('../../lib/xrm-client-v9/xrm').Api;
 
