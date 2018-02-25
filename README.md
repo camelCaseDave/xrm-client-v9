@@ -13,7 +13,7 @@ A mock execution context for testing client-side scripting in Dynamics 365 v9.
 
 This software is licensed under the MIT License.
 
-Copyright Fedor Indutny, 2018.
+Copyright Dave Clark, 2018.
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the
