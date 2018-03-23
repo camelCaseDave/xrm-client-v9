@@ -1,7 +1,7 @@
 ## xrm-client-v9 *(work in progress)*
 [![Build Status](https://secure.travis-ci.org/camelCaseDave/xrm-client-v9.svg)](http://travis-ci.org/camelCaseDave/xrm-client-v9)
 
-A mock execution context for testing client-side scripting in Dynamics 365 v9.
+A fake execution context for testing client-side scripting in Dynamics 365 v9.
 
 ## Usage
 
